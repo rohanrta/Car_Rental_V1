@@ -1,0 +1,116 @@
+/* 🌟 General Styling */
+.filter-category {
+  margin-bottom: 20px;
+}
+
+.filter-category h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.filter-category label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.filter-category input {
+  margin-right: 10px;
+}
+
+/* 📌 Filter Panel */
+.filter-container {
+  position: fixed;
+  top: 80px; /* Space below header */
+  left: -100%;
+  height: calc(100vh - 80px);
+  width: 70%;
+  background: white;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* When Open, Slide into View */
+.filter-container.open {
+  left: 0;
+}
+.filter-search {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 
+              inset -2px -2px 5px rgba(255, 255, 255, 0.5),
+              0px 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  color: #333;
+}
+
+/* 🔍 Search Input Placeholder */
+.filter-search::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+/* ✨ Focus Effect */
+.filter-search:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* 📍 Filter Toggle Button */
+.filter-toggle {
+  position: fixed;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background: #007bff;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+}
+
+/* 🏁 Move Button to the Right Edge When Filter is Open */
+.filter-toggle.moved {
+  left: calc(70% - 55px); /* Moves button to right edge */
+}
+
+.filter-toggle i {
+  font-size: 20px;
+}
+
+.filter-toggle:hover {
+  background: #0056b3;
+}
+
+/* 🖥️ Always Visible on Desktop */
+@media (min-width: 769px) {
+  .filter-container {
+    position: relative;
+    left: 0;
+    height: auto;
+    width: 280px;
+  }
+
+  .filter-toggle {
+    display: none;
+  }
+}

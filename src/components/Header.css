@@ -1,0 +1,4 @@
+.dropdown-menu {
+    display: block !important;  /* Force dropdown to be visible */
+    position: absolute !important;
+  }

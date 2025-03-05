@@ -1,0 +1,79 @@
+/* Input Field Styling */
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px; /* Slightly larger padding for better UX */
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+/* Focus Effect */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  background-color: white;
+}
+
+/* Placeholder Styling */
+.form-control::placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* Label Styling */
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+/* Default styling for larger screens */
+.getdata-container {
+  display: block;
+  
+}
+.btn-primary {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Hide Getdata on mobile screens */
+@media (max-width: 768px) {
+  .getdata-container {
+      display: none;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-control {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+
+  label {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-control {
+      font-size: 0.85rem;
+      padding: 7px 10px;
+  }
+
+  label {
+      font-size: 0.85rem;
+  }
+}

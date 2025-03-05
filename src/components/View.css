@@ -1,0 +1,36 @@
+/* 🌟 Car Grid Container */
+.car-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards */
+  align-items: center;
+  gap: 25px; /* Added gap for a clean look */
+  padding: 20px;
+}
+
+/* ✅ For tablets & small laptops */
+@media (max-width: 1024px) {
+  .car-grid {
+      justify-content: space-evenly;
+      gap: 20px;
+  }
+}
+
+/* ✅ For mobile devices */
+@media (max-width: 768px) {
+  .car-grid {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; 
+      gap: 15px; /* Adjust gap for mobile */
+      padding: 15px;
+  }
+}
+
+/* ✅ For extra small devices */
+@media (max-width: 480px) {
+  .car-grid {
+      padding: 10px;
+      gap: 12px; /* Slightly smaller gap */
+  }
+}
